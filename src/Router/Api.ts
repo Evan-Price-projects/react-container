@@ -1,3 +1,5 @@
+import { Allergen } from "../types/Allergen";
+
 const API_URL = import.meta.env.VITE_API_URL
 
 export const Api ={
@@ -12,6 +14,10 @@ export const Api ={
           }
         )
         return await albums.json();
+    },
+    allergens: async():Promise<Allergen[]>=>{
+        const allergens = await fetch(`${API_URL}/allergens`)
+        return allergens.json()
     }
 }
 

@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Authenticate from './Signup/Authenticate';
+import HomePage from './HomePage/HomePage';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Authenticate />,
+      element: <HomePage/>
     },
     {
       path: "about",
